@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<style type="text/css">
+input{
+	margin-bottom:15px;
+}
+#passwordmeter {
+	border: 1px solid #666;
+	display:inline-block;
+	height: 1em;
+	vertical-align:middle;
+	width:100px;
+}
+#passwordmeter span {
+	background-color: gray;
+	display:inline-block;
+	height:1em;
+	width:25px;
+}
+</style>
+<meta charset="UTF-8" />
+<title>Registration</title>
+
+<h1>Register for an account!</h1>
+<section>
+	<form action="../dynamic/user/" method="post" id="form">
+		<div><label>Username:<input type="text" id="username" name="userid"/></label><i id="usernameStatus" class="material-icons">thumb_up</i></div>
+		<div><label>Name:<input type="text" id="name" name="name"/></label></div>
+		<div><label>Password:<input type="password" id="password" name="password"/></label></div>
+		<div style="margin-bottom: 15px;">
+			<span id="passwordmeter"><span></span></span>
+			<span id="passwordmessage" aria-live="polite"></span>
+		</div>
+		<div><label>Confirm Password:<input type="password" id="confirm_password"/></label></div>
+		<button type="submit" id="submit">Submit</button>
+	</form> 
+</section>
+<div  id="error"><p>Enter Info</p></div>
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="zxcvbn.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
